@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/swiperefresh"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp30"
+                android:orientation="vertical">
+                <include
+                    android:id="@+id/included_toolbar"
+                    layout="@layout/layout_toolbar" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chat_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp3" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/empty_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/empty_view_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/no_notification" />
+
+                <TextView
+                    android:id="@+id/empty_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:gravity="center"
+                    android:text="No Booking"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_17sp"
+                    tools:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/loading_view"
+                layout="@layout/layout_loader"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+
+<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+</layout>

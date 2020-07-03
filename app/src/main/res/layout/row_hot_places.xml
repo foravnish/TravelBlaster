@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="@dimen/dp190"
+            android:layout_height="@dimen/dp140"
+            android:layout_marginBottom="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.rishabhharit.roundedimageview.RoundedImageView
+                        android:id="@+id/imgProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp130"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bgimage1"
+                        app:cornerRadius="8dp"
+                        app:roundedCorners="all" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/dp3"
+                        android:layout_marginRight="@dimen/dp3"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:background="@drawable/strock_hot_place_bottom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:gravity="left"
+                            android:text="Featured"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_size_18sp"
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtName"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginRight="@dimen/dp5"
+                            android:layout_marginBottom="@dimen/dp10"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtDays"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4.3"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_14sp"
+                                android:textStyle="bold" />
+
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@+id/txt1"-->
+<!--                                android:text="(3 Review)"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="@dimen/text_size_12sp" />-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

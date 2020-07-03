@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="@dimen/dp5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp5">
+
+                <com.rishabhharit.roundedimageview.RoundedImageView
+                    android:id="@+id/user_image_view"
+                    android:layout_width="@dimen/dp75"
+                    android:layout_height="@dimen/dp75"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:cornerRadius="8dp"
+                    app:roundedCorners="all"
+                    android:src="@drawable/product_placeholder" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp7"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp5">
+
+                    <LinearLayout
+                        android:id="@+id/job_title_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/job_title_txtVw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size_16sp"
+                            tools:text="Ac Repair" />
+
+                        <TextView
+                            android:id="@+id/job_type"
+                            android:layout_width="@dimen/dp80"
+                            android:layout_height="@dimen/dp24"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_12sp"
+                            tools:text="ASAP" />
+
+                        <TextView
+                            android:id="@+id/rate_driver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/drawable_background_blue"
+                            android:paddingLeft="@dimen/dp20"
+                            android:paddingTop="@dimen/dp7"
+                            android:paddingRight="@dimen/dp20"
+                            android:paddingBottom="@dimen/dp7"
+                            android:text="Rate"
+                            android:textColor="@color/colorPrimary"
+                            android:visibility="visible" />
+
+                        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                            android:id="@+id/driver_rating"
+                            style="@style/rating_bar"
+                            android:layout_width="60dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:progressTint="#f77501"
+                            android:stepSize="1"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/job_date_txtVw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/job_title_container"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_toLeftOf="@+id/cash_paid_img"
+                        android:drawableLeft="@drawable/clock"
+                        android:drawablePadding="@dimen/dp10"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dp2"
+                        android:textColor="@color/gray_bebebe"
+                        android:textSize="@dimen/text_size_13sp"
+                        tools:text="26 April 2018" />
+
+                    <TextView
+                        android:id="@+id/job_address_txtVw_pic_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/job_date_txtVw"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:drawableLeft="@drawable/pickup_point"
+                        android:drawablePadding="@dimen/dp10"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:textColor="@color/gray_bebebe"
+                        android:textSize="@dimen/text_size_13sp"
+                        tools:text="180 St Kilda Rd, Melbourne VIC 3006,Australia 80 St Kilda Rd, Melbourne VIC 3006,Australia" />
+
+                    <TextView
+                        android:id="@+id/job_address_txtVw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/job_address_txtVw_pic_up"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_toLeftOf="@+id/cash_paid_img"
+                        android:drawableLeft="@drawable/location"
+                        android:drawablePadding="@dimen/dp10"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:textColor="@color/gray_bebebe"
+                        android:textSize="@dimen/text_size_13sp"
+                        tools:text="180 St Kilda Rd, Melbourne VIC 3006,Australia" />
+
+                    <ImageView
+                        android:id="@+id/cash_paid_img"
+                        android:layout_width="@dimen/dp60"
+                        android:layout_height="@dimen/dp60"
+                        android:layout_below="@+id/job_title_container"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/cash_payment"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bid_cost_txtVw"
+                android:layout_width="@dimen/dp100"
+                android:layout_height="@dimen/dp40"
+                android:layout_gravity="right"
+                android:background="@drawable/price_shape"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp30"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_17sp"
+                tools:text="$1000" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

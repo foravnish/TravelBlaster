@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_collapseMode="pin"
+            app:theme="@style/ToolbarTheme"
+            app:titleTextColor="@android:color/white" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1-jun"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_22sp" />
+
+
+
+                    <TextView
+                        android:id="@+id/txtStartingFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="Starting From"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:textColor="@color/grayText"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="3dp"
+                        android:layout_marginTop="@dimen/dp10"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp20"
+                            android:orientation="vertical">
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp10"
+                                android:layout_marginRight="@dimen/dp10"
+                                android:layout_marginBottom="@dimen/dp20"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Price Per Person"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/grayText"
+                                    android:textSize="@dimen/text_size_22sp" />
+
+                                <TextView
+                                    android:id="@+id/txtPricePerPerson"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1-jun"
+                                    android:textColor="@color/inactive_text"
+                                    android:textSize="@dimen/text_size_22sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="3dp"
+                        android:layout_marginTop="@dimen/dp10"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp20"
+                            android:orientation="vertical">
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp10"
+                                android:layout_marginRight="@dimen/dp10"
+                                android:layout_marginBottom="@dimen/dp20"
+                                android:orientation="vertical">
+
+
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp10"
+                                    android:layout_marginRight="@dimen/dp10"
+                                    android:layout_marginBottom="@dimen/dp20"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Date of Travelling"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/grayText"
+                                        android:textSize="@dimen/text_size_22sp" />
+
+
+                                    <TextView
+                                        android:id="@+id/txtEdit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:text="CHANGE"
+                                        android:textColor="@color/blue2"
+                                        android:textSize="@dimen/text_size_16sp" />
+
+                                </RelativeLayout>
+
+
+
+
+
+                                <TextView
+                                    android:id="@+id/txtdateOfTravelling"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/inactive_text"
+                                    android:textSize="@dimen/text_size_22sp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp10"
+                                    android:layout_marginRight="@dimen/dp10"
+                                    android:layout_marginBottom="@dimen/dp20"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp10"
+                                        android:layout_marginRight="@dimen/dp10"
+                                        android:layout_marginBottom="@dimen/dp20"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Number of Travelers"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/grayText"
+                                            android:textSize="@dimen/text_size_22sp" />
+
+
+                                    </RelativeLayout>
+
+
+                                    <TextView
+                                        android:id="@+id/txtNoPerPerson"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 Travellers"
+                                        android:textColor="@color/inactive_text"
+                                        android:textSize="@dimen/text_size_22sp" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp80"
+                        android:background="@color/md_grey_200"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deal &amp; Coupon"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:textColor="@color/grayText"
+                            android:textSize="@dimen/text_size_22sp" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_referral"
+                                android:layout_width="@dimen/dp190"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:hint="have a Referral Code"
+                                android:background="@drawable/edit_txt"
+                                android:padding="@dimen/dp10"
+                                android:layout_marginLeft="@dimen/dp10"
+                                android:inputType="text"
+                                android:paddingLeft="@dimen/dp10"/>
+
+                            <TextView
+                                android:id="@+id/txtReferralValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Applied"
+                                android:layout_marginLeft="@dimen/dp20"
+                                android:layout_marginTop="@dimen/dp30"
+                                android:layout_below="@+id/edt_referral"
+                                android:textColor="@color/green_light"
+                                android:textSize="@dimen/text_size_14sp" />
+
+                            <Button
+                                android:id="@+id/btn_apply_refferal"
+                                android:layout_width="@dimen/dp120"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:text="Apply"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:background="@drawable/login_button"
+                                android:layout_marginRight="@dimen/dp20"
+                                android:textSize="@dimen/text_size_18sp"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"/>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp20">
+
+                        <EditText
+                            android:id="@+id/edt_coupan_code"
+                            android:layout_width="@dimen/dp190"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:hint="Have a coupon code"
+                            android:background="@drawable/edit_txt"
+                            android:padding="@dimen/dp10"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/dp10"/>
+
+                            <TextView
+                                android:id="@+id/txtCouponValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Applied"
+                                android:layout_marginLeft="@dimen/dp20"
+                                android:layout_marginTop="@dimen/dp30"
+                                android:layout_below="@+id/edt_coupan_code"
+                                android:textColor="@color/green_light"
+                                android:textSize="@dimen/text_size_14sp" />
+
+                            <Button
+                                android:id="@+id/btn_apply_coupan"
+                                android:layout_width="@dimen/dp120"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:text="Apply"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:background="@drawable/login_button"
+                                android:layout_marginRight="@dimen/dp20"
+                                android:textSize="@dimen/text_size_18sp"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                </ScrollView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtTotalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:text="price"
+                    android:background="@color/md_grey_600"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/txtContinueToPayent"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:text="CONTINUE TO PAYMENT"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/loading_view"
+                layout="@layout/layout_loader"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+</layout>

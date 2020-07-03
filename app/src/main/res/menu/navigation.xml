@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/selector_home"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_booking"
+        android:title="My Booking"
+        android:icon="@drawable/selector_booking"/>
+
+    <item
+        android:id="@+id/navigation_ecahs"
+        android:icon="@drawable/selector_ecash"
+        android:title="ECash" />
+
+    <item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/selector_notification"
+        android:title="Notification" />
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/selector_settings"
+        android:title="Setting" />
+
+</menu>

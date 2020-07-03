@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_color">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/relative"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp400">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewpager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp20"
+                                android:text="Hi Chikara,"
+                                android:textColor="@color/white"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+                        </androidx.viewpager.widget.ViewPager>
+
+                        <me.relex.circleindicator.CircleIndicator
+                            android:id="@+id/indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="@dimen/dp380"
+                            app:ci_drawable="@drawable/circle_indicator_black"
+                            app:ci_drawable_unselected="@drawable/circle_indicator_gray"
+                            app:ci_height="@dimen/dp4"
+                            app:ci_width="@dimen/dp4" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp40">
+
+                        <TextView
+                            android:id="@+id/txtName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hi ,"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_24sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp22"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp20"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/notification"
+                            android:tint="@color/white" />
+
+
+                        <TextView
+                            android:id="@+id/txtWhereGoFor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtName"
+                            android:text="Where do you want to go?"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_24sp"
+                            android:textStyle="bold" />
+
+
+                        <EditText
+                            android:id="@+id/editMobileNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/txtWhereGoFor"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_marginRight="@dimen/dp20"
+                            android:background="@drawable/login_edittext"
+                            android:drawableLeft="@android:drawable/ic_menu_search"
+                            android:ems="10"
+                            android:editable="false"
+                            android:gravity="left"
+                            android:hint="Where are you going?"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"></EditText>
+
+
+                    </RelativeLayout>
+
+
+
+                </FrameLayout>
+
+                <!--hot palaces-->
+                <LinearLayout
+                    android:id="@+id/layoutHotPlce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:id="@+id/relBest"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp16"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:textSize="@dimen/text_size_18sp">
+
+                                <TextView
+                                    android:id="@+id/lblHotPlace"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:text="Hot Places"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/text_size_18sp" />
+
+                                <TextView
+                                    android:id="@+id/txtHotPlace"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/dp16"
+                                    android:paddingLeft="@dimen/dp13"
+                                    android:paddingTop="@dimen/dp6"
+                                    android:paddingRight="@dimen/dp13"
+                                    android:paddingBottom="@dimen/dp6"
+                                    android:text="SEE ALL"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/orange"
+                                    android:textSize="@dimen/text_size_16sp" />
+                            </RelativeLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_view_images"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/relBest"
+                                android:layout_marginLeft="@dimen/dp10"
+                                android:layout_marginRight="@dimen/dp10" />
+                        </RelativeLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+<!--                Category-->
+                <LinearLayout
+                    android:id="@+id/layoutCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:id="@+id/catRel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp16"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:textSize="@dimen/text_size_18sp">
+
+                                <TextView
+                                    android:id="@+id/lblCat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:text="Categories"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/text_size_18sp" />
+
+                                <TextView
+                                    android:id="@+id/txtCatagory"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/dp16"
+                                    android:paddingLeft="@dimen/dp13"
+                                    android:paddingTop="@dimen/dp6"
+                                    android:paddingRight="@dimen/dp13"
+                                    android:paddingBottom="@dimen/dp6"
+                                    android:text="SEE ALL"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/orange"
+                                    android:textSize="@dimen/text_size_16sp" />
+                            </RelativeLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_category"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/catRel"
+                                android:layout_marginRight="@dimen/dp10" />
+                        </RelativeLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+<!--                itinerary-->
+
+                <LinearLayout
+                    android:id="@+id/layoutItinary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/reliti"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp16"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:textSize="@dimen/text_size_18sp">
+
+                                <TextView
+                                    android:id="@+id/lblitir"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/text_size_18sp" />
+
+                                <TextView
+                                    android:id="@+id/txtitirarary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/dp16"
+                                    android:paddingLeft="@dimen/dp13"
+                                    android:paddingTop="@dimen/dp6"
+                                    android:paddingRight="@dimen/dp13"
+                                    android:paddingBottom="@dimen/dp6"
+                                    android:text="SEE ALL"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/orange"
+                                    android:textSize="@dimen/text_size_16sp" />
+                            </RelativeLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_ininary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/reliti"
+                                android:layout_marginLeft="@dimen/dp10"
+                                android:layout_marginRight="@dimen/dp10" />
+                        </RelativeLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+<!--                Flight-->
+                <LinearLayout
+                    android:id="@+id/layoutFlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/relFlight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp16"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:textSize="@dimen/text_size_18sp">
+
+                                <TextView
+                                    android:id="@+id/lblFlight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:text="Flight"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/text_size_18sp" />
+
+                                <TextView
+                                    android:id="@+id/txtFlight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/dp16"
+                                    android:paddingLeft="@dimen/dp13"
+                                    android:paddingTop="@dimen/dp6"
+                                    android:paddingRight="@dimen/dp13"
+                                    android:paddingBottom="@dimen/dp6"
+                                    android:text="SEE ALL"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/orange"
+                                    android:textSize="@dimen/text_size_16sp" />
+                            </RelativeLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_flight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/relFlight"
+                                android:layout_marginLeft="@dimen/dp10"
+                                android:layout_marginRight="@dimen/dp10" />
+                        </RelativeLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+<!--                save time-->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp150"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/save_time"/>
+
+
+<!--                Hotel-->
+                <LinearLayout
+                    android:id="@+id/layoutHotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/relHotel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp16"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:textSize="@dimen/text_size_18sp">
+
+                                <TextView
+                                    android:id="@+id/lblHotel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:text="Hotel"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/text_size_18sp" />
+
+                                <TextView
+                                    android:id="@+id/txtHotel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/dp16"
+                                    android:paddingLeft="@dimen/dp13"
+                                    android:paddingTop="@dimen/dp6"
+                                    android:paddingRight="@dimen/dp13"
+                                    android:paddingBottom="@dimen/dp6"
+                                    android:text="SEE ALL"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/orange"
+                                    android:textSize="@dimen/text_size_16sp" />
+                            </RelativeLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_hotel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/relHotel"
+                                android:layout_marginLeft="@dimen/dp10"
+                                android:layout_marginRight="@dimen/dp10" />
+                        </RelativeLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+<!--                Visa-->
+                <LinearLayout
+                    android:id="@+id/layoutVisa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/relVisa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp16"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:textSize="@dimen/text_size_18sp">
+
+                                <TextView
+                                    android:id="@+id/lblVisa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:text="Visa"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/text_size_18sp" />
+
+                                <TextView
+                                    android:id="@+id/txtVisa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/dp16"
+                                    android:paddingLeft="@dimen/dp13"
+                                    android:paddingTop="@dimen/dp6"
+                                    android:paddingRight="@dimen/dp13"
+                                    android:paddingBottom="@dimen/dp6"
+                                    android:text="SEE ALL"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/orange"
+                                    android:textSize="@dimen/text_size_16sp" />
+                            </RelativeLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_visa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/relVisa"
+                                android:layout_marginLeft="@dimen/dp10"
+                                android:layout_marginRight="@dimen/dp10" />
+                        </RelativeLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+<!--                Insurance-->
+                <LinearLayout
+                    android:id="@+id/layoutInsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/relinsurance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp16"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:textSize="@dimen/text_size_18sp">
+
+                                <TextView
+                                    android:id="@+id/lblInsurance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:text="Insurance"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/text_size_18sp" />
+
+                                <TextView
+                                    android:id="@+id/txtInsurance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/dp16"
+                                    android:paddingLeft="@dimen/dp13"
+                                    android:paddingTop="@dimen/dp6"
+                                    android:paddingRight="@dimen/dp13"
+                                    android:paddingBottom="@dimen/dp6"
+                                    android:text="SEE ALL"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/orange"
+                                    android:textSize="@dimen/text_size_16sp" />
+                            </RelativeLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_insurance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp10"
+                                android:layout_below="@+id/relinsurance"
+                                android:layout_marginRight="@dimen/dp10" />
+                        </RelativeLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/loading_view"
+            layout="@layout/layout_loader"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</layout>

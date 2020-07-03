@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="tour.traveling.travel.ui.profile.ProfileViewModel" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:layout_collapseMode="pin"
+                app:theme="@style/ToolbarTheme"
+                app:titleTextColor="@android:color/white" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbarThumbVertical="@android:color/transparent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/dp200"
+                            android:layout_height="@dimen/dp160"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp30"
+                            android:onClick="@{viewModel::uploadImage}">
+
+<!--                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                                android:id="@+id/profile_image"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:background="@drawable/travel_blaster_logo"-->
+<!--                                app:civ_border_width="@dimen/dp1" />-->
+
+                            <ImageView
+                                android:layout_width="@dimen/dp200"
+                                android:layout_height="@dimen/dp160"
+                                android:src="@drawable/travel_blaster_logo"
+                                android:layout_gravity="center"/>
+
+
+                        </FrameLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp20"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/dp10"
+                            android:visibility="gone"
+                            android:paddingBottom="@dimen/dp20">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dp7"
+                                android:src="@drawable/phone" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dp7"
+                                android:src="@drawable/fb" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dp7"
+                                android:src="@drawable/cards" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp20"
+                            android:layout_marginRight="@dimen/dp10"
+                            android:layout_marginBottom="@dimen/dp10"
+                            android:background="@drawable/drawable_white_bg"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp10">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/label_personal_details"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/black" />
+
+                                <TextView
+                                    android:id="@+id/edit_vw"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:background="@drawable/drawable_blue_rounded"
+                                    android:drawableLeft="@drawable/edit"
+                                    android:drawablePadding="@dimen/dp5"
+                                    android:gravity="right"
+                                    android:paddingLeft="@dimen/dp10"
+                                    android:paddingTop="@dimen/dp5"
+                                    android:paddingRight="@dimen/dp10"
+                                    android:paddingBottom="@dimen/dp5"
+                                    android:text="@string/label_edit"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="@dimen/text_size_12sp"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/user_name_edtTxt"
+                                style="@style/profile_style"
+                                android:layout_marginTop="@dimen/dp10"
+                                android:drawableLeft="@drawable/user"
+                                android:inputType="text"
+                                tools:text="Len Markus" />
+
+                            <View style="@style/profile_seperator" />
+
+
+                            <EditText
+                                android:id="@+id/user_mobile_edtTxt"
+                                style="@style/profile_style"
+                                android:drawableLeft="@drawable/phone1"
+                                android:textColor="@color/inactive_text"
+                                tools:text="+61 407 337 188" />
+
+                            <View style="@style/profile_seperator" />
+
+                            <EditText
+                                android:id="@+id/user_email_edtTxt"
+                                style="@style/profile_style"
+                                android:drawableLeft="@drawable/mail"
+                                android:textColor="@color/inactive_text"
+                                tools:text="len@kwixglobal.com" />
+
+                            <View style="@style/profile_seperator" />
+
+                            <TextView
+                                android:id="@+id/user_address_edtTxt"
+                                style="@style/profile_style"
+                                android:clickable="false"
+                                android:drawableLeft="@drawable/address"
+                                android:enabled="false"
+                                android:imeOptions="actionDone"
+                                android:inputType="textMultiLine"
+                                android:onClick="@{viewModel::getAddressFromGoogle}"
+                                tools:text="180 St Kilda Rd, Melbourne VIC 3006, Australia" />
+
+                            <View style="@style/profile_seperator" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp10" />
+
+                        </LinearLayout>
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/payment_container"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="@dimen/dp10"-->
+<!--                            android:layout_marginTop="@dimen/dp20"-->
+<!--                            android:layout_marginRight="@dimen/dp10"-->
+<!--                            android:layout_marginBottom="@dimen/dp10"-->
+<!--                            android:background="@drawable/drawable_white_bg"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="@dimen/dp10">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="@string/label_payment_method"-->
+<!--                                android:textAllCaps="true"-->
+<!--                                android:textColor="@android:color/black" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/add_debit_card_vw"-->
+<!--                                style="@style/profile_style"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginTop="@dimen/dp10"-->
+<!--                                android:drawableLeft="@drawable/credit_debit_card"-->
+<!--                                android:drawableRight="@drawable/next_icon"-->
+<!--                                android:text="Add Debit/ Credit Card" />-->
+
+<!--                        </LinearLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/loading_view"
+            layout="@layout/layout_loader"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+</layout>

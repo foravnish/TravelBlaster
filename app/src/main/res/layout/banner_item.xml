@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bgimage1"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_trance_strock"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Santorni Glance"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/ratingBarValue"
+            style="@style/Widget.MaterialRatingBar.RatingBar"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp20"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_alignParentRight="true"
+            android:rating="3.0"
+            android:stepSize="1"
+            android:progressTint="#f77501"/>
+
+        <TextView
+            android:id="@+id/txtCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16sp"
+            android:layout_below="@+id/txt1"/>
+
+        <TextView
+            android:id="@+id/txtDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14sp"
+            android:layout_below="@+id/txtCountry"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" (3 Review)"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14sp"
+                android:layout_below="@+id/txt1"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

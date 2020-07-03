@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="variable"
+            type="com.mooveall.ui.fragment.settings.DriverSettingViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp30"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/included_toolbar"
+                layout="@layout/layout_toolbar" />
+
+            <TextView
+                android:id="@+id/profile_txtVw"
+                style="@style/style_settings"
+                android:drawableLeft="@drawable/user"
+                android:onClick="@{variable::onProfileClicked}"
+                android:text="Profile" />
+
+            <View style="@style/settings_seperator" />
+
+
+            <TextView
+                android:id="@+id/change_password_txtVw"
+                style="@style/style_settings"
+                android:drawableLeft="@drawable/change_password"
+                android:onClick="@{variable::changePassword}"
+                android:text="Change Password" />
+
+            <View style="@style/settings_seperator" />
+
+            <TextView
+                android:id="@+id/review_txtVw"
+                style="@style/style_settings"
+                android:drawableLeft="@drawable/review"
+                android:onClick="@{variable::review}"
+                android:text="Review" />
+
+            <View style="@style/settings_seperator" />
+
+            <TextView
+                android:id="@+id/feedback_txtVw"
+                style="@style/style_settings"
+                android:drawableLeft="@drawable/feedback_setting"
+                android:onClick="@{variable::giveFeedback}"
+                android:text="Feedback" />
+
+            <View style="@style/settings_seperator" />
+
+            <TextView
+                android:id="@+id/terms_conditions_txtVw"
+                style="@style/style_settings"
+                android:drawableLeft="@drawable/t_c"
+                android:onClick="@{variable::gotoTermsConditions}"
+                android:text="Terms and Conditiona" />
+
+            <View style="@style/settings_seperator" />
+
+            <TextView
+                android:id="@+id/about_us_txtVw"
+                style="@style/style_settings"
+                android:drawableLeft="@drawable/about_us"
+                android:onClick="@{variable::aboutUs}"
+                android:text="About us" />
+
+            <View style="@style/settings_seperator" />
+
+            <TextView
+                android:id="@+id/logout_txtVw"
+                style="@style/style_settings"
+                android:drawableLeft="@drawable/logout"
+                android:onClick="@{variable::logout}"
+                android:text="Logout" />
+            <View style="@style/settings_seperator" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/loading_view"
+            layout="@layout/layout_loader"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</layout>

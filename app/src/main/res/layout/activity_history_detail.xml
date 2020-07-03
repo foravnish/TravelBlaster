@@ -1,0 +1,235 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp450"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp400"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?android:attr/colorControlHighlight"
+                app:expandedTitleTextAppearance="@android:color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <!--                app:expandedTitleMarginEnd="64dp"-->
+                <!--                app:expandedTitleMarginStart="48dp"-->
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp400">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/product_placeholder"
+                        app:layout_collapseMode="parallax" />
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:titleTextColor="@color/white" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginBottom="@dimen/dp35"
+                    android:gravity="bottom|start"
+                    android:orientation="horizontal"
+                    app:layout_collapseMode="parallax">
+
+
+                    <TextView
+                        android:id="@+id/txtCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:drawableLeft="@drawable/location"
+                        android:drawablePadding="@dimen/dp10"
+                        android:drawableTint="@color/white"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:layout_marginBottom="@dimen/dp3"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/ratingPoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.3"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/ratingReviews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt1"
+                            android:text="(3 Review)"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp45"
+                    android:layout_marginBottom="@dimen/dp50"
+                    android:gravity="bottom|end"
+                    android:orientation="horizontal"
+                    app:layout_collapseMode="parallax">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_heart_filled"
+                        android:tint="@color/orange" />
+                </LinearLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/orange"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/gray4" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginLeft="@dimen/dp20"-->
+<!--            android:layout_marginTop="@dimen/dp60"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/job_date_txtVw"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/job_title_container"-->
+<!--                android:layout_marginTop="@dimen/dp20"-->
+<!--                android:layout_toLeftOf="@+id/cash_paid_img"-->
+<!--                android:drawableLeft="@drawable/clock"-->
+<!--                android:drawablePadding="@dimen/dp10"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:maxLines="1"-->
+<!--                android:paddingTop="@dimen/dp2"-->
+<!--                android:textColor="@color/gray_bebebe"-->
+<!--                android:textSize="@dimen/text_size_20sp"-->
+<!--                tools:text="26 April 2018" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/job_address_txtVw_pic_up"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/job_date_txtVw"-->
+<!--                android:layout_marginTop="@dimen/dp20"-->
+<!--                android:drawableLeft="@drawable/pickup_point"-->
+<!--                android:drawablePadding="@dimen/dp10"-->
+<!--                android:ellipsize="marquee"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:maxLines="2"-->
+<!--                android:textColor="@color/gray_bebebe"-->
+<!--                android:textSize="@dimen/text_size_20sp"-->
+<!--                tools:text="180 St Kilda Rd, Melbourne VIC 3006,Australia 80 St Kilda Rd, Melbourne VIC 3006,Australia" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/job_address_txtVw"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/job_address_txtVw_pic_up"-->
+<!--                android:layout_marginTop="@dimen/dp20"-->
+<!--                android:layout_toLeftOf="@+id/cash_paid_img"-->
+<!--                android:drawableLeft="@drawable/location"-->
+<!--                android:drawablePadding="@dimen/dp10"-->
+<!--                android:ellipsize="marquee"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:maxLines="2"-->
+<!--                android:textColor="@color/gray_bebebe"-->
+<!--                android:textSize="@dimen/text_size_20sp"-->
+<!--                tools:text="180 St Kilda Rd, Melbourne VIC 3006,Australia" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/job_final_amount"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/job_address_txtVw_pic_up"-->
+<!--                android:layout_marginTop="@dimen/dp20"-->
+<!--                android:layout_toLeftOf="@+id/cash_paid_img"-->
+<!--                android:drawableLeft="@drawable/payment_method"-->
+<!--                android:drawablePadding="@dimen/dp10"-->
+<!--                android:ellipsize="marquee"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:maxLines="2"-->
+<!--                android:textColor="@color/gray_bebebe"-->
+<!--                android:textSize="@dimen/text_size_20sp"-->
+<!--                tools:text="180 St Kilda Rd, Melbourne VIC 3006,Australia" />-->
+
+
+<!--        </LinearLayout>-->
+
+
+
+        <include
+            android:id="@+id/included_footer"
+            layout="@layout/layout_footer_detail_page_history" />
+
+        <include
+            android:id="@+id/loading_view"
+            layout="@layout/layout_loader"
+            android:visibility="gone"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
